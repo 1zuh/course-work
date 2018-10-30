@@ -12,6 +12,10 @@ def setup():
     images6 = loadImage("frame_06_delay-0.25s.gif")
     
 def draw():
+    global page
+    page += 1
+    if page == 49:
+        page = 0
     if page == 6:
         image(images0, 50, 50, 320, 240)
     if page == 12:
@@ -27,11 +31,5 @@ def draw():
     if page == 42:
         image(images6, 50, 50, 320, 240)
     if page == 48:
-        image(images5, 50, 50, 320, 240)
-def mousePressed():  # Triggers once per mouse-press
-    global page
-    page += 1
-    if page == 49:
-        page = 0
-
+        image(images5, 50, 50, 320, 240)  
         
